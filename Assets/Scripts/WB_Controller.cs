@@ -36,6 +36,9 @@ public class WB_Controller : MonoBehaviour
     public float pointTotal = 0f;
     [SerializeField] private TextMeshProUGUI totalPointsText;
 
+    //Speed Line vars
+    [SerializeField] ParticleSystem speedLines;
+
     void Start()
     {
         RB.transform.parent = null;
@@ -70,6 +73,17 @@ public class WB_Controller : MonoBehaviour
 
         //Points Things
         totalPointsText.text = pointTotal.ToString();
+
+        //Speed Line things
+        if(forwardAccel > 250)
+        {
+            speedLines.Play();
+        }
+        else
+        if(forwardAccel <= 250)
+        {
+            speedLines.Stop();
+        }
     }
 
     private void FixedUpdate()

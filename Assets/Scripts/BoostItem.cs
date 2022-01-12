@@ -10,7 +10,6 @@ public class BoostItem : MonoBehaviour
     {
         if (WheelBarrow.CompareTag("wheelBarrow"))
         {
-            //test change
             Instantiate(boostParticles, transform.position, transform.rotation);
         }
     }
