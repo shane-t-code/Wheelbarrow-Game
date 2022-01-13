@@ -52,10 +52,10 @@ public class WB_Controller : MonoBehaviour
         {
             speedInput = Input.GetAxis("Vertical") * forwardAccel * -1;
         }
-        else if (Input.GetAxis("Vertical") < 0)
-        {
-            speedInput = Input.GetAxis("Vertical") * reverseAccel * -1;
-        }
+        //else if (Input.GetAxis("Vertical") < 0)
+        //{
+        //    speedInput = Input.GetAxis("Vertical") * reverseAccel * -1;
+        //}
 
         turnInput = Input.GetAxis("Horizontal");
 
